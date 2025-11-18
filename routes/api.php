@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\CartController;
 use App\Http\Controllers\Api\ItemController;
 
 // nanti kalau sudah buat ItemController:
@@ -29,5 +30,8 @@ Route::middleware('auth:sanctum')->group(function () {
 
       // Modul 2: CRUD Items
     Route::apiResource('items', ItemController::class);
+
+     // Modul 3: Carts
+    Route::apiResource('carts', CartController::class);
 });
 
